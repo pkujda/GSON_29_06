@@ -9,8 +9,18 @@ public class Main {
         String json = gson.toJson(person1);
         System.out.println(json);
 
-        Person person2 = gson.fromJson(json,Person.class);
-        System.out.println(person2);
-    }
+        String personJson = "{'imie': Abraham, 'nazwisko': Lincoln, 'wiek': 78, 'wzrost': 1.82, 'listaHobby': polityka}";
+        Gson gson1 = new Gson();
+        Person person2 = gson.fromJson(personJson,Person.class);
+        System.out.println(person2.toString());
 
+        Box<Person> box = new Box<Person>(new Person("Louis", "CK", 52, 1.65, "comedian"));
+        Gson gson2 = new Gson();
+        String json2 = gson.toJson(box);
+        System.out.println(json2.toString());
+
+
+
+
+    }
 }

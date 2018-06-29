@@ -59,5 +59,14 @@ public class Person {
         this.wzrost = wzrost;
     }
 
-
+    @Override
+    public String toString() {
+        return "Person{" +
+                "imie='" + imie + '\'' +
+                ", nazwisko='" + nazwisko + '\'' +
+                ", wiek=" + wiek +
+                ", wzrost=" + wzrost +
+                ", listaHobby='" + listaHobby + '\'' +
+                '}';
+    }
 }
